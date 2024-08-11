@@ -1,0 +1,36 @@
+{% extends "rental/rentalindex.html" %}
+{% block body %}
+
+
+<form id="form2" name="form2" method="post" action="/myapp/rental_editproduct_post/
+"enctype="multipart/form-data">
+    {% csrf_token %}
+
+<table class="table table-bordered">
+<input type="hidden" name="id1"value="{{ data.id }}">
+  <tr>
+    <th>product</th>
+    <td>
+      <input type="text" name="textfield2" id="textfield2"class="form-control" value="{{ data.Productname }}" />
+    </td>
+  </tr>
+  <tr>
+    <th>price</th>
+    <td>
+      <input type="text" name="textfield3" id="textfield3" class="form-control" value="{{ data.Price }}"/>
+    </td>
+  </tr><tr>
+    <td>photo</td>
+    <td>
+      <input type="file" name="photo" id="textfield3" class="form-control" />
+         <img src="{{ data.Photo }}" height="100" width="100">
+    </td>
+  </tr>
+    <tr>
+    <td>
+      <input type="submit" name="button " class="btn btn-success" id="button" value="Submit" />
+    </td>
+  </tr>
+    </table>
+</form>
+{% endblock %}

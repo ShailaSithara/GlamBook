@@ -1,0 +1,43 @@
+{% extends "rental/rentalindex.html" %}
+{% block body %}
+
+<body>
+<form id="form2" name="form2" method="post" action="/myapp/rental_viewprofile/">
+{% csrf_token %}
+<table class="table table-bordered">
+    <tr><td><img src="{{ data.Photo }}" height="100" width="100"></td></tr>
+  <tr>
+    <th>name</th>
+    <td>&nbsp;{{data.Name  }}</td>
+  </tr>
+  <tr>
+    <th>phone no</th>
+    <td>&nbsp;{{ data.Phoneno }}</td>
+  </tr>
+  <tr>
+    <th>email</th>
+    <td>&nbsp;{{ data.Email }}</td>
+  </tr>
+  <tr>
+    <th>address</th>
+  <td>{{ data.Place }}<br>{{ data.Post }}<br>{{ data.Pin }}<br>{{ data.State }}</td>
+  </tr>
+  <tr>
+    <th>status</th>
+    <td>&nbsp;{{ data.Status }}</td>
+  </tr>
+  <tr>
+    <th>latitude</th>
+    <td>&nbsp;{{ data.Latitude }}</td>
+  </tr>
+  <tr>
+    <th>longitude</th>
+    <td>&nbsp;{{ data.Longitude }}</td>
+  </tr>
+    <tr>
+        <td><a href="/myapp/rental_editprofile/"class="btn btn-success">editprofile</a>
+        </td>    </tr>
+</table>
+</form>>
+</body>
+{% endblock %}

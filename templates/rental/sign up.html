@@ -1,0 +1,128 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>Minimal login and signup forms Responsive Widget Template : W3layouts</title>
+
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="/static/newform/css/style.css" type="text/css" media="all" />
+
+    <!-- fontawesome v5 -->
+    <script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<form id="form2" name="form2" method="post"
+action="/myapp/rental_signup_post/"enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <section class="forms">
+        <div class="container">
+            <!-- logo -->
+            <div class="logo">
+                <a class="brand-logo" href="index.html">Signup</a>
+            </div>
+            <!-- //logo -->
+            <div class="forms-grid">
+
+                <!-- register -->
+                <div class="register">
+                    <span class="fas fa-user-circle"></span>
+                    <strong>Create account!</strong>
+                    <formaction="#" method="post" class="register-form">
+                        <fieldset>
+                            <div class="form">
+                                <div class="form-row">
+                                    <span class="fas fa-user"></span>
+                                    <label class="form-label" for="textfield2"  >Name</label>
+                                    <input type="text" class="form-text" name="texfield2">
+                                </div>
+                                <div class="form-row">
+                                    <span class="fas fa-user"></span>
+                                    <label class="form-control" for="textfield2">Photo</label>
+                                    <input type="file" class="form-text" name="photo">
+                                </div>
+                                <div class="form-row">
+                                    <span class="fas fa-user"></span>
+                                    <label class="form-label" for="textfield3">Phone</label>
+                                    <input type="text" class="form-text" name="textfield3">
+                                </div>
+                                <div class="form-row">
+                                    <span class="fas fa-envelope"></span>
+                                    <label class="form-label" for="textfield4">E-mail</label>
+                                    <input type="email" class="form-text" name="textfield4">
+                                </div>
+                                <div class="form-row">
+                                    <span class="fas fa-user"></span>
+                                    <label class="form-label" for="textfield5">Place</label>
+                                    <input type="text" class="form-text" name="textfield5">
+                                </div>
+                                <div class="form-row">
+                                    <span class="fas fa-user"></span>
+                                    <label class="form-label" for="textfield6">Post</label>
+                                    <input type="text" class="form-text" name="textfield6">
+                                </div>
+                                <div class="form-row">
+                                    <span class="fas fa-user"></span>
+                                    <label class="form-label" for="textfield7">Pin</label>
+                                    <input type="text" class="form-text" name="textfield7">
+                                </div>
+                                <div class="form-row">
+                                    <span class="fas fa-user"></span>
+                                    <label class="form-label" for="textfield8">State</label>
+                                    <input type="text" class="form-text" name="textfield8">
+                                </div> <div class="form-row">
+                                    <span class="fas fa-user"></span>
+                                    <label class="form-label" for="textfield10">Latitude</label>
+                                    <input type="text" class="form-text" name="textfield10">
+                                </div> <div class="form-row">
+                                    <span class="fas fa-user"></span>
+                                    <label class="form-label" for="textfield11">Longitude</label>
+                                    <input type="text" class="form-text" name="textfield11" >
+                                </div>
+                                <div class="form-row">
+                                    <span class="fas fa-lock"></span>
+                                    <label class="form-label" for="textfield11">Password</label>
+                                    <input type="password" class="form-text" name="password">
+                                </div>
+                                <div class="form-row">
+                                    <span class="fas fa-lock"></span>
+                                    <label class="form-label" for="textfield11">Confirm Password</label>
+                                    <input type="password" class="form-text" name="cpassword">
+                                </div>
+                                <div class="form-row button-login">
+                                    <button class="btn btn-login">Create <span
+                                            class="fas fa-arrow-right"></span></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                        </form>
+
+
+
+                </div>
+                <!-- //register -->
+            </div>
+
+            <!-- copyright -->
+
+            <!-- //copyright -->
+        </div>
+    </section>
+
+</body>
+
+</html>

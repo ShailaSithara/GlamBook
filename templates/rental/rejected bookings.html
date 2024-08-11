@@ -1,0 +1,44 @@
+{% extends "rental/rentalindex.html" %}
+{% block body %}
+
+<body>
+<form id="form2" name="form2" method="post" action="/myapp/rental_rejectedbooking_from_user_post/">
+    {% csrf_token %}
+<table class="pull-left">
+    <tr>
+      <td>
+
+        <input type="text" name="textfield" placeholder="Search with Name"  class="form-control" id="textfield2" required/>
+
+
+      </td>
+      <td>
+        <input type="submit" name="button" id="button" class="btn btn-info" value="Search" />
+      </td>
+    </tr>
+  </table>
+    <br>
+<table class="table table-bordered">
+  <tr>
+    <th>s.no</th>
+    <th>product name</th>
+    <th>price</th>
+    <th>user name</th>
+    <th>status</th>
+    <th>date</th>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter}}</td>
+    <td>&nbsp;{{ i.PRODUCT.Productname}}</td>
+    <td>&nbsp;{{ i.PRODUCT.Price }}</td>
+    <td>{{ i.USER.Name }}</td>
+    <td>{{ i.Status }}</td>
+    <td>{{ i.Date }}</td>
+  </tr> {% endfor %}
+</table>
+</form>
+</body>
+{% endblock %}

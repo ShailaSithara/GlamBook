@@ -1,0 +1,41 @@
+{% extends "rental/rentalindex.html" %}
+{% block body %}
+
+<body>
+<form id="form2" name="form2" method="post" action="/myapp/rental_viewproduct_post/">
+{% csrf_token %}
+<table class="pull-left">
+    <tr>
+      <td>
+        <input type="text" name="textfield" class="form-control"  placeholder="Search with Productname"  id="textfield2" />
+
+
+      </td>
+      <td>
+        <input type="submit" name="button" id="button" class="btn btn-info" value="Search" />
+      </td>
+    </tr>
+  </table>
+<br>
+<table class="table table-bordered">
+  <tr>
+      <th>no</th>
+    <th>product name</th>
+    <th>price</th>
+    <th>photo&nbsp;</th>
+  </tr>
+    {% for i in data %}
+
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ i.Productname }}</td>
+    <td>&nbsp;{{ i.Price }}</td>
+      <td> <img src="{{ i.Photo }}" height="100" width="100"> </td>
+    <td><a href="/myapp/rental_editproduct/{{ i.id}}">edit</a></td>
+    <td><a href="/myapp/delete_rental_viewproduct/#aa{{ i.id }}">delete</a></td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+{% endblock %}

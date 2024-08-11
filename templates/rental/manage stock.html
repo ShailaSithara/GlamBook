@@ -1,0 +1,36 @@
+{% extends "rental/rentalindex.html" %}
+{% block body %}
+
+<body>
+<form id="form3" name="form3" method="post" action="/myapp/rental_managestock_post/">
+{% csrf_token %}
+<table class="table table-bordered">
+  <tr>
+    <th>stock</th>
+    <td>
+      <input type="text" name="textfield" placeholder="Search with Name" class="form-control"  id="textfield" required />
+    </td>
+  </tr>
+  <tr>
+    <th>product</th>
+    <td>
+      <label for="select"></label>
+      <select name="select" id="select">
+          {% for i in data %}
+          <option value="{{ i.id }}">
+              {{ i.Productname }}
+          </option>
+          {% endfor %}
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input type="submit" name="button" id="button" class="btn btn-success" value="Submit" />
+   </td>
+  </tr>
+</table>
+</form>
+</body>
+{% endblock %}

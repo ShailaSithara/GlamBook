@@ -1,0 +1,88 @@
+{% extends "rental/rentalindex.html" %}
+{% block body %}
+
+<body>
+<form id="form2" name="form2" method="post" action="/myapp/rental_editprofile_post/">
+{% csrf_token %}
+   <table class="table table-bordered">
+
+  <tr>
+    <th>name</th>
+    <td>
+
+      <input type="text" name="textfield2" class="form-control" id="textfield2" value="{{ data.Name }}" />
+    </td>
+  </tr>
+  <tr>
+    <th>phone no</th>
+    <td>
+
+      <input type="text" name="textfield3" class="form-control" id="textfield3" value="{{ data.Phoneno }}" />
+    </td>
+  </tr>
+  <tr>
+    <th>email</th>
+    <td>
+
+      <input type="text" name="textfield4"class="form-control" id="textfield4" value="{{ data.Email }}"/>
+    </td>
+  </tr>
+  <tr>
+    <th>place</th>
+    <td>
+
+      <input type="text" name="textfield5" class="form-control" id="textfield5" value="{{ data.Place }}" />
+    </td>
+  </tr>
+  <tr>
+    <th>post</th>
+    <td>
+
+      <input type="text" name="textfield6" class="form-control" id="textfield6" value="{{ data.Post }}" />
+    </td>
+  </tr>
+  <tr>
+    <th>pin</th>
+    <td>
+
+      <input type="text" name="textfield7" class="form-control" id="textfield7" value="{{ data.Pin }}"/>
+    </td>
+  </tr>
+  <tr>
+    <th>state</th>
+    <td>
+
+      <input type="text" name="textfield8" class="form-control" id="textfield8" value="{{ data.State }}" />
+    </td>
+  </tr>
+  <tr>
+    <th>status</th>
+    <td>
+
+      <input type="text" name="textfield9" class="form-control" id="textfield9" value="{{ data.Status }}"/>
+    </td>
+  </tr>
+  <tr>
+    <th>latitude</th>
+    <td>
+
+      <input type="text" name="textfield10" class="form-control" id="textfield10" value="{{ data.Latitude }}" />
+    </td>
+  </tr>
+  <tr>
+    <th>longitude</th>
+    <td>
+
+      <input type="text" name="textfield11"  class="form-control"id="textfield11" value="{{ data.Longitude }}"/>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>
+      <input type="submit" name="button" id="button"   class="btn btn-success" value="Submit" />
+    </td>
+  </tr>
+</table>
+</form>
+</body>
+{% endblock %}
