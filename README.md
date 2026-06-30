@@ -5,9 +5,6 @@
 
 <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"/>
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"/>
-<img src="https://img.shields.io/badge/REST_API-009688?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS-blueviolet?style=for-the-badge"/>
 
 ### ✨ Beauty • Fashion • Rentals • Bookings • Everything in One Place ✨
 
